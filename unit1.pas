@@ -18,6 +18,7 @@ type
     Label1: TLabel;
     EtsyPriceLabel: TLabel;
     procedure BasePriceEditChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { private declarations }
   public
@@ -38,7 +39,13 @@ procedure TLythaPricingUtilsForm.BasePriceEditChange(Sender: TObject);
 begin
      EtsyPriceLabel.Caption := FloatToStrF(
        BasePriceEdit.Value+BasePriceEdit.Value*0.035+0.2
-       ,ffCurrency,4,2);
+       ,ffCurrency,5,2);
+end;
+
+procedure TLythaPricingUtilsForm.FormCreate(Sender: TObject);
+begin
+     Top := 0;
+     Left := Screen.Width-Width;
 end;
 
 

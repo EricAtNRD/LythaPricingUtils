@@ -1,14 +1,14 @@
 object LythaPricingUtilsForm: TLythaPricingUtilsForm
-  Left = 329
+  Left = 255
   Height = 52
-  Top = 160
+  Top = 143
   Width = 214
   AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Lytha Studios Pricing Utilities'
   ClientHeight = 52
   ClientWidth = 214
-  Position = poDefault
+  OnCreate = FormCreate
   LCLVersion = '0.9.30'
   object GroupBox1: TGroupBox
     Left = 8
@@ -28,11 +28,11 @@ object LythaPricingUtilsForm: TLythaPricingUtilsForm
       ParentColor = False
     end
     object EtsyPriceLabel: TLabel
-      Left = 158
+      Left = 152
       Height = 16
       Top = 8
-      Width = 26
-      Caption = '$?.??'
+      Width = 36
+      Caption = '$???.??'
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
