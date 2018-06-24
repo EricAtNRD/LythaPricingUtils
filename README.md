@@ -1,7 +1,7 @@
 # LythaPricingUtils
 
-This is a simple desktop utility to calculate prices when listing items on Etsy.com.
+This is a simple desktop utility to calculate prices when listing items on online marketplaces such as Etsy.com (only supported marketplace currently).
 
-Enter a base-cost and it will take into account Etsy's sales and listing fees and output the final item price.
+An item base-cost can be entered and the utility will take into account sales and listing fees and output the final item price.
 
-It is developed in the cross-platform Lazarus / Free Pascal environment for easy compilation to Windows / Linux / Mac.
+LythaPricingUtils is developed in-house for LythaStudios.etsy.com using the cross-platform Lazarus / Free Pascal environment for easy compilation to Windows / Linux / Mac.
