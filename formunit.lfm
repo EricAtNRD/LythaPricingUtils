@@ -1,37 +1,37 @@
 object LythaPricingUtilsForm: TLythaPricingUtilsForm
-  Left = 1437
+  Left = 1018
   Height = 52
-  Top = 152
-  Width = 214
+  Top = 117
+  Width = 230
   AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Pricing Utilities'
   ClientHeight = 52
-  ClientWidth = 214
+  ClientWidth = 230
   OnCreate = FormCreate
-  LCLVersion = '1.0.10.0'
+  LCLVersion = '1.8.4.0'
   object EtsyGroupBox1: TGroupBox
     Left = 8
     Height = 48
     Top = 0
-    Width = 200
+    Width = 215
     Caption = 'Etsy Listing'
-    ClientHeight = 29
-    ClientWidth = 196
+    ClientHeight = 28
+    ClientWidth = 211
     TabOrder = 0
     object EtsyFormulaLabel: TLabel
       Left = 70
-      Height = 18
-      Top = 9
-      Width = 87
-      Caption = '+?.?%+$?.?? ='
+      Height = 15
+      Top = 4
+      Width = 86
+      Caption = ' + ?.?% + $?.?? ='
       ParentColor = False
     end
     object EtsyPriceLabel: TLabel
-      Left = 152
-      Height = 18
-      Top = 8
-      Width = 34
+      Left = 163
+      Height = 15
+      Top = 4
+      Width = 25
       Caption = '$?.??'
       Font.Style = [fsBold]
       ParentColor = False
@@ -39,7 +39,7 @@ object LythaPricingUtilsForm: TLythaPricingUtilsForm
     end
     object BasePriceEdit: TFloatSpinEdit
       Left = 1
-      Height = 27
+      Height = 23
       Top = 0
       Width = 69
       Increment = 0.01
@@ -50,4 +50,4 @@ object LythaPricingUtilsForm: TLythaPricingUtilsForm
       Value = 1
     end
   end
-end
+end

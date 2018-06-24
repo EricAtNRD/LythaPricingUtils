@@ -55,11 +55,11 @@ begin
      Left := Screen.Width-Width;
 
      (* Display price formula (caption). *)
-     EtsyFormulaLabel.Caption := 'x' +
+     EtsyFormulaLabel.Caption := ' + ' +
        FloatToStrF(ETSYITEMSALEPERC,ffFixed,2,1) +
-       '%+$' +
+       '% + $' +
        FloatToStrF(ETSYITEMLISTINGFEE,ffFixed,5,2) +
-       '=';
+       ' = ';
 
      (* Calculate initial price based by manually calling event handler. *)
      BasePriceEditChange(LythaPricingUtilsForm);
