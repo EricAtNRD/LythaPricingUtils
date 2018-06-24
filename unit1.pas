@@ -15,7 +15,7 @@ type
   TLythaPricingUtilsForm = class(TForm)
     BasePriceEdit: TFloatSpinEdit;
     GroupBox1: TGroupBox;
-    Label1: TLabel;
+    FormulaLabel: TLabel;
     EtsyPriceLabel: TLabel;
     procedure BasePriceEditChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -24,6 +24,10 @@ type
   public
     { public declarations }
   end; 
+
+const
+  ITEMSALEPERC = 3.5;       (* Sales fee - percentage *)
+  ITEMLISTINGFEE = 0.20;    (* Listing fee - flat rate in USD *)
 
 var
   LythaPricingUtilsForm: TLythaPricingUtilsForm;
@@ -37,17 +41,24 @@ implementation
 
 procedure TLythaPricingUtilsForm.BasePriceEditChange(Sender: TObject);
 begin
-     EtsyPriceLabel.Caption := FloatToStrF(
-       BasePriceEdit.Value+BasePriceEdit.Value*0.035+0.2
-       ,ffCurrency,5,2);
+     EtsyPriceLabel.Caption := '$' +
+       FloatToStrF(
+         BasePriceEdit.Value+BasePriceEdit.Value*(ITEMSALEPERC/100)+ITEMLISTINGFEE,
+         ffFixed,5,2);
 end;
 
 procedure TLythaPricingUtilsForm.FormCreate(Sender: TObject);
 begin
      Top := 0;
      Left := Screen.Width-Width;
+     FormulaLabel.Caption := 'x' +
+       FloatToStrF(ITEMSALEPERC,ffFixed,2,1) +
+       '%+$' +
+       FloatToStrF(ITEMLISTINGFEE,ffFixed,5,2) +
+       '=';
+     BasePriceEditChange(LythaPricingUtilsForm);
 end;
 
 
 end.
-
+
