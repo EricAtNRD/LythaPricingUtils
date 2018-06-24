@@ -1,7 +1,7 @@
 object LythaPricingUtilsForm: TLythaPricingUtilsForm
-  Left = 1024
+  Left = 1044
   Height = 52
-  Top = 179
+  Top = 160
   Width = 214
   AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
